@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "FontScope",
+    "description": "Easily identify fonts on any webpage including family, size, style, color, weight, and line height.",
+    "version": "1.0",
+    "permissions": [
+      "activeTab",
+      "contextMenus"
+    ],
+    "icons": {
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [{
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }]
+  }
